@@ -1,9 +1,3 @@
-/**
-* Template Name: UpConstruction - v1.3.0
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -211,3 +205,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+  // Initiate the wowjs
+  new WOW().init();
+
+
+  function counterUP(viewNumber) {
+    let startCount = 0;
+    const targetNumber = parseInt(viewNumber.dataset.number);
+    const interval = 50; // Intervalo en milisegundos (ajusta según tu preferencia)
+    
+    const countInterval = setInterval(() => {
+        startCount++;
+        viewNumber.innerHTML = startCount;
+        if (startCount >= targetNumber) {
+            clearInterval(countInterval);
+        }
+    }, interval);
+}
+
+// Función que se ejecuta cuando el elemento es visible
+function handleIntersection(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            counterUP(entry.target);
+            observer.unobserve(entry.target); // Dejar de observar una vez activado el contador
+        }
+    });
+}
+
+// Configuración del Intersection Observer
+const options = {
+    threshold: 0.2 // Porcentaje de visibilidad necesario para activar el observer
+};
+
+const totalNumber = document.querySelectorAll('.counter-text');
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observar cada elemento del contador
+totalNumber.forEach(viewNumber => {
+    observer.observe(viewNumber);
+});
