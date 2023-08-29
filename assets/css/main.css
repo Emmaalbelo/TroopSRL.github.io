@@ -204,7 +204,7 @@ section {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 8px solid #fff;
+  border: 11px solid #fff;
   border-color: var(--color-primary) transparent var(--color-primary) transparent;
   border-radius: 50%;
   width: 60px;
@@ -216,6 +216,7 @@ section {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 
 
 #preloader .circle {
@@ -595,11 +596,10 @@ section {
   display: inline-block;
 }
 
-.counter-text {
+.about .counter-text {
   font-size: 48px;
   font-weight: 600;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -631,6 +631,7 @@ section {
 .features .nav-link h4 {
   font-size: 18px;
   font-weight: 600;
+  text-align: center;
   margin: 0;
 }
 
@@ -777,11 +778,6 @@ section {
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-
-.constructions .container {
-}
-
-
 
 .constructions .service-item {
   padding: 40px;
@@ -1390,6 +1386,24 @@ section {
   border: 2px dotted #008dca;
 }
 
+.contact .social-links {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 20px 0 30px 0;
+}
+
+.contact .social-links i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: var(--color-primary);
+  border-radius: 50%;
+}
+
+
 .contact .info-item h3 {
   font-size: 20px;
   color: #6c757d;
@@ -1403,6 +1417,33 @@ section {
   font-size: 14px;
   margin-bottom: 0;
 }
+
+.socials-icon {
+  display: flex;
+  gap: 10px;
+  border: none;
+  padding-bottom: 0px;
+}
+
+.social-icon {
+  display: inline-block;
+  border: none;
+  padding-bottom: 0px;
+}
+
+
+.socials-icon .facebook-icon i {
+  color: #1877f2;
+  border: none;
+
+}
+
+.socials-icon .instagram-icon i {
+  color: #c13584;
+  border: none;
+
+}
+
 
 
 @keyframes animate-loading {
