@@ -10,6 +10,7 @@
   --color-default: #4f5558;
   --color-primary: #008dca;
   --color-secondary: #1e272c;
+  --color-Tertiary: #ffb11c;
 }
 
 /* Smooth scroll behavior */
@@ -32,7 +33,7 @@ a {
 }
 
 a:hover {
-  color: #008dca;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -177,7 +178,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #008dca;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -226,7 +227,7 @@ section {
   transform: translate(-50%, -50%);
   width: 16px;
   height: 16px;
-  background-color: #FFB11C;
+  background-color: var(--color-Tertiary);
   border-radius: 50%;
 }
 
@@ -554,6 +555,9 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  background: #F5F6F7;
+}
 
 .about ul {
   list-style: none;
@@ -599,6 +603,7 @@ section {
 .about .counter-text {
   font-size: 48px;
   font-weight: 600;
+  color: var(--color-primary);
 }
 
 
@@ -742,12 +747,12 @@ section {
 # Constructions Section
 --------------------------------------------------------------*/
 .constructions {
-  background: #fff;
+  background: #F5F6F7;
 }
 
 .constructions .card-item {
   border: 1px solid rgba(82, 86, 94, 0.2);
-  background: #fff;
+  background: #F5F6F7;
   position: relative;
   border-radius: 0;
 }
@@ -779,7 +784,7 @@ section {
 # Services Section
 --------------------------------------------------------------*/
 
-.constructions .service-item {
+/* .constructions .service-item {
   padding: 40px;
   background: #F5F6F7;
   height: 100%;
@@ -863,9 +868,114 @@ section {
 .service-item {
   position: relative;
   overflow: hidden;
+} */
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+  position: relative;
+  width: 100%;
+  padding: 45px 0 15px 0;
 }
 
+.service .service-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
+.service .service-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.service .service-img img {
+  width: 100%;
+}
+
+.service .service-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 15, 39, .7);
+  transition: .5s;
+  opacity: 0;
+}
+
+.service .service-overlay a {
+  padding-top: 5px;
+  color: var(--color-Tertiary);
+}
+
+.service .service-item:hover .service-overlay {
+  opacity: 1;
+}
+
+.service .service-overlay p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.service .service-text {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background: #030f27;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.service .service-text h3 {
+  margin: 0;
+  padding: 0 15px 0 25px;
+  width: calc(100% - 60px);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.service .service-text i {
+  margin: 0;
+  padding-right: 30px;
+  width: calc(100% - 60px);
+  font-size: 30px;
+
+}
+
+.service .service-item a.btn {
+  width: 60px;
+  height: 60px;
+  padding: 3px 0 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 100;
+  color: #030f27;
+  background: var(--color-Tertiary);
+  border-radius: 0;
+  transition: .3s;
+}
+
+.service .service-item:hover a.btn {
+  color: #ffffff;
+}
 
 /*--------------------------------------------------------------
 # Our Projects Section
@@ -1161,7 +1271,7 @@ section {
 }
 
 .project-details .portfolio-info .btn-visit:hover {
-  background: #008dca;
+  background: var(--color-primary);
 }
 
 .project-details .portfolio-description h2 {
@@ -1206,7 +1316,7 @@ section {
 
 .project-details .portfolio-description .testimonial-item .quote-icon-left,
 .project-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: #008dca;
+  color: var(--color-primary);
   font-size: 26px;
   line-height: 0;
 }
@@ -1296,6 +1406,12 @@ section {
   color: var(--color-primary);
 }
 
+.zanjadora {
+  margin-top: 50px;
+  display: block;
+}
+
+
 .imagen-courusel {
   padding: 20px;
   display: flex;
@@ -1383,7 +1499,7 @@ section {
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #008dca;
+  border: 2px dotted var(--color-primary);
 }
 
 .contact .social-links {
@@ -1720,7 +1836,7 @@ section {
 
 .footer__icon {
   font-size: 1.5rem;
-  color: #008dca;
+  color: var(--color-primary);
   margin-right: 0.75rem;
   ;
 }
