@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         viewNumber.innerHTML = startCount;
         if (startCount >= targetNumber) {
             clearInterval(countInterval);
+            viewNumber.classList.add('text-color');
         }
     }, interval);
 }
